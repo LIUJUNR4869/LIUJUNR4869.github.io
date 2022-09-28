@@ -6,7 +6,7 @@
   <link href="https://liujunr4869.github.io/atom.xml" rel="self"/>
   
   <link href="https://liujunr4869.github.io/"/>
-  <updated>2022-09-28T06:52:28.014Z</updated>
+  <updated>2022-09-28T07:41:38.486Z</updated>
   <id>https://liujunr4869.github.io/</id>
   
   <author>
@@ -17,18 +17,70 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献</title>
+    <link href="https://liujunr4869.github.io/2022/09/28/wen-xian/"/>
+    <id>https://liujunr4869.github.io/2022/09/28/wen-xian/</id>
+    <published>2022-09-28T07:40:01.000Z</published>
+    <updated>2022-09-28T07:41:38.486Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/logo3.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/logo3.jpg&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>J车间调度</title>
+    <link href="https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/che-jian-diao-du/"/>
+    <id>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/che-jian-diao-du/</id>
+    <published>2022-09-28T07:06:41.539Z</published>
+    <updated>2022-09-28T07:06:41.539Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/../_resources/logo3.jpg" alt="logo3.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/../_resources/logo3.jpg&quot; alt=&quot;logo3.jpg&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Sublime" scheme="https://liujunr4869.github.io/tags/Sublime/"/>
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JDBC学习</title>
     <link href="https://liujunr4869.github.io/2022/09/28/bian-cheng-xue-xi/jdbc-xue-xi/"/>
     <id>https://liujunr4869.github.io/2022/09/28/bian-cheng-xue-xi/jdbc-xue-xi/</id>
     <published>2022-09-28T06:10:11.632Z</published>
-    <updated>2022-09-28T06:52:28.014Z</updated>
+    <updated>2022-09-28T07:18:53.136Z</updated>
     
-    <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="false"><a href="#false" class="headerlink" title="false"></a>false</h2><smg src="logo3.png"></smg>]]></content>
+    <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="false"><a href="#false" class="headerlink" title="false"></a>false</h2><p><img src="/F/myblog/source/_posts/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/logo3.jpg" alt="avatar"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;</summary>
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;
+
+
+
+&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;spa</summary>
       
     
     
