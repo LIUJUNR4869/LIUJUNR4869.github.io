@@ -6,7 +6,7 @@
   <link href="https://liujunr4869.github.io/atom.xml" rel="self"/>
   
   <link href="https://liujunr4869.github.io/"/>
-  <updated>2022-09-28T07:41:38.486Z</updated>
+  <updated>2022-09-28T08:11:11.516Z</updated>
   <id>https://liujunr4869.github.io/</id>
   
   <author>
@@ -20,36 +20,42 @@
     <title>文献</title>
     <link href="https://liujunr4869.github.io/2022/09/28/wen-xian/"/>
     <id>https://liujunr4869.github.io/2022/09/28/wen-xian/</id>
-    <published>2022-09-28T07:40:01.000Z</published>
-    <updated>2022-09-28T07:41:38.486Z</updated>
+    <published>2022-09-28T07:40:01.719Z</published>
+    <updated>2022-09-28T08:11:11.516Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/logo3.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/logo3.jpg" alt="avatar"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/logo3.jpg&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/logo3.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
 </summary>
       
     
     
     
+    <category term="Markdown" scheme="https://liujunr4869.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Sublime" scheme="https://liujunr4869.github.io/tags/Sublime/"/>
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/tags/Markdown/"/>
     
   </entry>
   
   <entry>
-    <title>J车间调度</title>
+    <title>车间调度</title>
     <link href="https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/che-jian-diao-du/"/>
     <id>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/che-jian-diao-du/</id>
     <published>2022-09-28T07:06:41.539Z</published>
-    <updated>2022-09-28T07:06:41.539Z</updated>
+    <updated>2022-09-28T08:11:41.324Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/../_resources/logo3.jpg" alt="logo3.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/logo3.jpg" alt="avatar"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/../_resources/logo3.jpg&quot; alt=&quot;logo3.jpg&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/logo3.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
 </summary>
       
     
@@ -69,7 +75,7 @@
     <link href="https://liujunr4869.github.io/2022/09/28/bian-cheng-xue-xi/jdbc-xue-xi/"/>
     <id>https://liujunr4869.github.io/2022/09/28/bian-cheng-xue-xi/jdbc-xue-xi/</id>
     <published>2022-09-28T06:10:11.632Z</published>
-    <updated>2022-09-28T08:04:18.109Z</updated>
+    <updated>2022-09-28T08:11:27.347Z</updated>
     
     <content type="html"><![CDATA[<h2 id="sublime-图片插入"><a href="#sublime-图片插入" class="headerlink" title="sublime 图片插入"></a>sublime 图片插入</h2><ol><li><p>首先安装上传本地图片的插件，在Hexo项目的根目录下输入</p><pre class="line-numbers language-none"><code class="language-none">npm install https://github.com/CodeFalling/hexo-asset-image --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>插件的内容需要进行修改，否则容易出现Bug</p><pre class="line-numbers language-none"><code class="language-none">'use strict';var cheerio = require('cheerio');// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-stringfunction getPosition(str, m, i) {  return str.split(m, i).join(m).length;}var version = String(hexo.version).split('.');hexo.extend.filter.register('after_post_render', function(data){  var config = hexo.config;  if(config.post_asset_folder){      var link = data.permalink;  if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)     var beginPos = getPosition(link, '/', 1) + 1;  else     var beginPos = getPosition(link, '/', 3) + 1;  // In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".  var endPos = link.lastIndexOf('/') + 1;    link = link.substring(beginPos, endPos);    var toprocess = ['excerpt', 'more', 'content'];    for(var i = 0; i &lt; toprocess.length; i++){      var key = toprocess[i];       var $ = cheerio.load(data[key], {        ignoreWhitespace: false,        xmlMode: false,        lowerCaseTags: false,        decodeEntities: false      });      $('img').each(function(){    if ($(this).attr('src')){      // For windows style path, we replace '\' to '/'.      var src = $(this).attr('src').replace('\\', '/');      if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;         !/^\s*\//.test(src)) {        // For "about" page, the first part of "src" can't be removed.        // In addition, to support multi-level local directory.        var linkArray = link.split('/').filter(function(elem){        return elem != '';        });        var srcArray = src.split('/').filter(function(elem){        return elem != '' &amp;&amp; elem != '.';        });        if(srcArray.length &gt; 1)        srcArray.shift();        src = srcArray.join('/');        $(this).attr('src', config.root + link + src);        console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);      }    }else{      console.info&amp;&amp;console.info("no src attr, skipped...");      console.info&amp;&amp;console.info($(this));    }      });      data[key] = $.html();    }  }});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>同时将Hexo下的_config.yml文件进行修改</p><pre class="line-numbers language-none"><code class="language-none">post_asset_folder: true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>绝对路径本地引用<br>在source里建立一个文件夹（如images），将图片统一放到source/images文件夹中，通过markdown语法访问它们。</p><pre class="line-numbers language-none"><code class="language-none">![](images/image.png) //(假设图片名：image.png)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>参考网页</p><pre class="line-numbers language-none"><code class="language-none">https://blog.csdn.net/qq_43401552/article/details/104805466https://blog.csdn.net/xjm850552586/article/details/84101345?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ol><p><img src="/images/logo3.jpg" alt="avatar"></p>]]></content>
     
