@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liujunr4869.github.io/404/index.html</loc>
+    
+    <lastmod>2022-09-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://liujunr4869.github.io/categories/index.html</loc>
     
     <lastmod>2022-09-27</lastmod>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>https://liujunr4869.github.io/</loc>
-    <lastmod>2022-09-27</lastmod>
+    <lastmod>2022-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
