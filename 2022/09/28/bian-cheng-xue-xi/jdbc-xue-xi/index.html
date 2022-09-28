@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JDBC学习, 闲余杂货铺">
+    <meta name="keywords" content="sumblime使用, 闲余杂货铺">
     <meta name="description" content="尚硅谷JDBC课程学习记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JDBC学习 | 闲余杂货铺</title>
+    <title>sumblime使用 | 闲余杂货铺</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -338,7 +338,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JDBC学习</h1>
+                    <h1 class="description center-align post-title">sumblime使用</h1>
                 </div>
             </div>
         </div>
@@ -413,12 +413,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class="line-numbers language-none"><code class="language-none">
+                <h2 id="sublime-图片插入"><a href="#sublime-图片插入" class="headerlink" title="sublime 图片插入"></a>sublime 图片插入</h2><ol>
+<li><p>首先安装上传本地图片的插件，在Hexo项目的根目录下输入</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install https://github.com/CodeFalling/hexo-asset-image --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>插件的内容需要进行修改，否则容易出现Bug</p>
+<pre class="line-numbers language-none"><code class="language-none">'use strict';
+var cheerio = require('cheerio');
 
+// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
+function getPosition(str, m, i) {
+  return str.split(m, i).join(m).length;
+}
 
+var version = String(hexo.version).split('.');
+hexo.extend.filter.register('after_post_render', function(data){
+  var config = hexo.config;
+  if(config.post_asset_folder){
+      var link = data.permalink;
+  if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)
+     var beginPos = getPosition(link, '/', 1) + 1;
+  else
+     var beginPos = getPosition(link, '/', 3) + 1;
+  // In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".
+  var endPos = link.lastIndexOf('/') + 1;
+    link = link.substring(beginPos, endPos);
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="false"><a href="#false" class="headerlink" title="false"></a>false</h2><p><img src="/F/myblog/source/_posts/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/logo3.jpg" alt="avatar"></p>
+    var toprocess = ['excerpt', 'more', 'content'];
+    for(var i = 0; i &lt; toprocess.length; i++){
+      var key = toprocess[i];
+ 
+      var $ = cheerio.load(data[key], {
+        ignoreWhitespace: false,
+        xmlMode: false,
+        lowerCaseTags: false,
+        decodeEntities: false
+      });
+
+      $('img').each(function(){
+    if ($(this).attr('src')){
+      // For windows style path, we replace '\' to '/'.
+      var src = $(this).attr('src').replace('\\', '/');
+      if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;
+         !/^\s*\//.test(src)) {
+        // For "about" page, the first part of "src" can't be removed.
+        // In addition, to support multi-level local directory.
+        var linkArray = link.split('/').filter(function(elem){
+        return elem != '';
+        });
+        var srcArray = src.split('/').filter(function(elem){
+        return elem != '' &amp;&amp; elem != '.';
+        });
+        if(srcArray.length &gt; 1)
+        srcArray.shift();
+        src = srcArray.join('/');
+        $(this).attr('src', config.root + link + src);
+        console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);
+      }
+    }else{
+      console.info&amp;&amp;console.info("no src attr, skipped...");
+      console.info&amp;&amp;console.info($(this));
+    }
+      });
+      data[key] = $.html();
+    }
+  }
+});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>同时将Hexo下的_config.yml文件进行修改</p>
+<pre class="line-numbers language-none"><code class="language-none">post_asset_folder: true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>绝对路径本地引用<br>在source里建立一个文件夹（如images），将图片统一放到source/images文件夹中，通过markdown语法访问它们。</p>
+<pre class="line-numbers language-none"><code class="language-none">![](images/image.png) //(假设图片名：image.png)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>参考网页</p>
+<pre class="line-numbers language-none"><code class="language-none">https://blog.csdn.net/qq_43401552/article/details/104805466
+https://blog.csdn.net/xjm850552586/article/details/84101345?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ol>
+<p><img src="/images/logo3.jpg" alt="avatar"></p>
 
                 
             </div>
@@ -593,9 +662,9 @@
                 <a href="/2022/09/28/bian-cheng-xue-xi/jdbc-xue-xi/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="JDBC学习">
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="sumblime使用">
                         
-                        <span class="card-title">JDBC学习</span>
+                        <span class="card-title">sumblime使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
