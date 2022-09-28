@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://liujunr4869.github.io/2022/09/07/wu-biao-ti/</loc>
+    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-xue-xi/</loc>
     
     <lastmod>2022-09-28</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://liujunr4869.github.io/2022/09/28/hello-world/</loc>
+    <loc>https://liujunr4869.github.io/2022/09/30/hello-world/</loc>
     
     <lastmod>2022-09-28</lastmod>
     
@@ -91,13 +91,6 @@
   
   <url>
     <loc>https://liujunr4869.github.io/tags/Markdown/</loc>
-    <lastmod>2022-09-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://liujunr4869.github.io/tags/Typora/</loc>
     <lastmod>2022-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
