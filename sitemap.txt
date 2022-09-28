@@ -1,9 +1,5 @@
-https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian-1/
-https://liujunr4869.github.io/2022/09/30/hello-world/
-https://liujunr4869.github.io/2018/09/07/test/
+https://liujunr4869.github.io/2022/09/28/bian-cheng-xue-xi/jdbc-xue-xi/
 https://liujunr4869.github.io/404/index.html
-https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian/
-https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc/
 https://liujunr4869.github.io/categories/index.html
 https://liujunr4869.github.io/friends/index.html
 https://liujunr4869.github.io/tags/index.html
