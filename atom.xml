@@ -44,21 +44,68 @@
   
   <entry>
     <title></title>
-    <link href="https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-xue-xi/"/>
-    <id>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-xue-xi/</id>
-    <published>2022-09-28T05:23:18.162Z</published>
-    <updated>2022-09-28T05:23:18.165Z</updated>
+    <link href="https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian-1/"/>
+    <id>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian-1/</id>
+    <published>2022-09-28T05:39:03.608Z</published>
+    <updated>2022-09-28T05:39:03.608Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="JDBC学习"><a href="#JDBC学习" class="headerlink" title="JDBC学习"></a>JDBC学习</h2><p>title: test<br>date: 2018-09-07 09:25:00<br>author: 闲余<br>img: /source/images/xxx.jpg<br>top: true<br>hide: false<br>cover: true<br>coverImg: /images/1.jpg<br>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92<br>toc: false<br>mathjax: false<br>summary: 文章摘要内容<br>categories: Markdown<br>tags:</p><ul><li>Sublime</li><li>Markdown</li></ul><hr>]]></content>
+    
+    
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Sublime" scheme="https://liujunr4869.github.io/tags/Sublime/"/>
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDBC文件</title>
+    <link href="https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian/"/>
+    <id>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian/</id>
+    <published>2022-09-28T05:38:25.731Z</published>
+    <updated>2022-09-27T21:38:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>author: 闲余<br>img: /source/images/xxx.jpg<br>top: true<br>hide: false<br>cover: true<br>coverImg: /images/1.jpg<br>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92<br>toc: false<br>mathjax: false<br>summary: 文章摘要内容<br>categories: Markdown<br>tags:</p><ul><li>Sublime</li><li>Markdown</li></ul><hr>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;JDBC学习&quot;&gt;&lt;a href=&quot;#JDBC学习&quot; class=&quot;headerlink&quot; title=&quot;JDBC学习&quot;&gt;&lt;/a&gt;JDBC学习&lt;/h2&gt;&lt;p&gt;title: test&lt;br&gt;date: 2018-09-07 09:25:00&lt;br&gt;author: 闲余</summary>
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;author: 闲余&lt;br&gt;img: /source/images/xxx.jpg&lt;br&gt;top: true&lt;br&gt;hide: false&lt;br&gt;cover: true&lt;br&gt;coverImg: /images/1.jpg&lt;br&gt;password: 8d969ee</summary>
       
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>JDBC</title>
+    <link href="https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc/"/>
+    <id>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc/</id>
+    <published>2022-09-28T05:32:38.575Z</published>
+    <updated>2022-09-27T21:32:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>JDBC学习</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;JDBC学习&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Sublime" scheme="https://liujunr4869.github.io/tags/Sublime/"/>
+    
+    <category term="Markdown" scheme="https://liujunr4869.github.io/tags/Markdown/"/>
     
   </entry>
   

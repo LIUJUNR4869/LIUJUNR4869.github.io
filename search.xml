@@ -32,12 +32,66 @@
     
     <entry>
       <title></title>
-      <link href="/2022/09/28/wen-xian-yue-du/jdbc-xue-xi/"/>
-      <url>/2022/09/28/wen-xian-yue-du/jdbc-xue-xi/</url>
+      <link href="/2022/09/28/wen-xian-yue-du/jdbc-wen-jian-1/"/>
+      <url>/2022/09/28/wen-xian-yue-du/jdbc-wen-jian-1/</url>
       
-        <content type="html"><![CDATA[<h2 id="JDBC学习"><a href="#JDBC学习" class="headerlink" title="JDBC学习"></a>JDBC学习</h2><p>title: test<br>date: 2018-09-07 09:25:00<br>author: 闲余<br>img: /source/images/xxx.jpg<br>top: true<br>hide: false<br>cover: true<br>coverImg: /images/1.jpg<br>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92<br>toc: false<br>mathjax: false<br>summary: 文章摘要内容<br>categories: Markdown<br>tags:</p><ul><li>Sublime</li><li>Markdown</li></ul><hr>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Sublime </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JDBC文件</title>
+      <link href="/2022/09/28/wen-xian-yue-du/jdbc-wen-jian/"/>
+      <url>/2022/09/28/wen-xian-yue-du/jdbc-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<hr><p>author: 闲余<br>img: /source/images/xxx.jpg<br>top: true<br>hide: false<br>cover: true<br>coverImg: /images/1.jpg<br>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92<br>toc: false<br>mathjax: false<br>summary: 文章摘要内容<br>categories: Markdown<br>tags:</p><ul><li>Sublime</li><li>Markdown</li></ul><hr>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JDBC</title>
+      <link href="/2022/09/28/wen-xian-yue-du/jdbc/"/>
+      <url>/2022/09/28/wen-xian-yue-du/jdbc/</url>
+      
+        <content type="html"><![CDATA[<p>JDBC学习</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Sublime </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
       
     </entry>
     

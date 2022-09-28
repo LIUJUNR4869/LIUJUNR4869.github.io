@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-xue-xi/</loc>
+    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian-1/</loc>
     
     <lastmod>2022-09-28</lastmod>
     
@@ -32,6 +32,24 @@
     <loc>https://liujunr4869.github.io/404/index.html</loc>
     
     <lastmod>2022-09-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc-wen-jian/</loc>
+    
+    <lastmod>2022-09-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/jdbc/</loc>
+    
+    <lastmod>2022-09-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
