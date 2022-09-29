@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liujunr4869.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/che-jian-diao-du/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liujunr4869.github.io/2022/09/28/ruan-jian-ying-yong/sumblime-shi-yong/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liujunr4869.github.io/contact/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://liujunr4869.github.io/resume/index.html</loc>
     
     <lastmod>2022-09-29</lastmod>
@@ -20,36 +56,9 @@
   </url>
   
   <url>
-    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://liujunr4869.github.io/musics/index.html</loc>
     
     <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liujunr4869.github.io/2022/09/28/wen-xian-yue-du/che-jian-diao-du/</loc>
-    
-    <lastmod>2022-09-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liujunr4869.github.io/2022/09/28/ruan-jian-ying-yong/sumblime-shi-yong/</loc>
-    
-    <lastmod>2022-09-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -82,15 +91,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://liujunr4869.github.io/tags/index.html</loc>
-    
-    <lastmod>2022-09-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://liujunr4869.github.io/</loc>
@@ -99,6 +99,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://liujunr4869.github.io/tags/%E8%BD%A6%E9%97%B4%E8%B0%83%E5%BA%A6/</loc>
+    <lastmod>2022-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://liujunr4869.github.io/tags/Sublime/</loc>
