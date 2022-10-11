@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>智能优化算法</title>
+      <link href="/2022/10/11/suan-fa-xue-xi/suan-fa-xue-xi/"/>
+      <url>/2022/10/11/suan-fa-xue-xi/suan-fa-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="智能优化算法"><a href="#智能优化算法" class="headerlink" title="智能优化算法"></a>智能优化算法</h1><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><h3 id="人工神经元"><a href="#人工神经元" class="headerlink" title="人工神经元"></a>人工神经元</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><blockquote><p><strong>人工神经元是有大量处理单元互联组成的自适应非线性信息处理系统</strong></p></blockquote><p>人工神经元要素：</p><p>​1.具有一组突触，ωij表示神经元i j之间的连接强度，其值可正可负</p><p>​2.具有体现神经元时空整合功能的输入信号累加器</p><p>​3.通过激励函数控制神经元的实际输出</p><p><strong>数学表示</strong></p><p>​激励函数描述输入输出之间的关系，最基本的类型为阶跃函数和S型函数</p><p>​阶跃函数<br>$$<br>f(t) = \begin{cases}</p><p>1,&amp; t≥0 \</p><p>0,&amp; t&lt;0 \</p><p>\end{cases}<br>$$<br>​S型函数<br>$$<br>f(t) = \frac{1}{1+e^{-t}}<br>$$</p><h4 id="算法模型"><a href="#算法模型" class="headerlink" title="算法模型"></a>算法模型</h4>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JDBC核心技术--尚硅谷</title>
       <link href="/2022/10/09/shang-huo-gu-song-hong-kang-jdbc/"/>
       <url>/2022/10/09/shang-huo-gu-song-hong-kang-jdbc/</url>
