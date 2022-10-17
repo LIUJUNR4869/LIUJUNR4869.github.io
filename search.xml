@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>分组拓扑排序</title>
+      <link href="/2022/10/17/suan-fa-xue-xi/fen-zu-tuo-bu-pai-xu/"/>
+      <url>/2022/10/17/suan-fa-xue-xi/fen-zu-tuo-bu-pai-xu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="分组拓扑排序"><a href="#分组拓扑排序" class="headerlink" title="分组拓扑排序"></a>分组拓扑排序</h1><p>使用面向对象的存储方式，vertex类表示顶点。Vertex类型的动态数组graph[n]存储邻接点，用户输入的每一个顶点都构建一个实例。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">pulic calss <span class="token class-name">Vertex</span><span class="token punctuation">{</span>    <span class="token keyword">int</span> id<span class="token punctuation">;</span><span class="token comment">//存放顶点序号</span>    <span class="token keyword">int</span> inDegree<span class="token punctuation">;</span><span class="token comment">//存放顶点入度</span>    <span class="token class-name">Vector</span> nearVertex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vector</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//存放邻接点（后继）</span>    <span class="token keyword">boolean</span> finish<span class="token punctuation">;</span><span class="token comment">//标识顶点是否输出</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">topoSort</span><span class="token punctuation">(</span>topoVertex<span class="token punctuation">[</span><span class="token punctuation">]</span> g<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token comment">//初始时, 设置所有结点均未进入分组拓扑序列</span>    <span class="token punctuation">{</span>        g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setFinish</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">while</span> <span class="token punctuation">(</span>m <span class="token operator">&lt;</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>        visited<span class="token punctuation">.</span><span class="token function">removeAllElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//动态数组用来记录一组拓扑序列</span>        flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//标志位, 用来检测图中是否存在环</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token comment">//查找入度为 0 且未进入分组的结点</span>        <span class="token punctuation">{</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getInDegree</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                visited<span class="token punctuation">.</span><span class="token function">addElement</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setFinish</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//进入分组的结点加上标记</span>                m<span class="token operator">++</span><span class="token punctuation">;</span>                flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        vis<span class="token punctuation">[</span>m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> visited<span class="token punctuation">;</span> <span class="token comment">//记录各组拓扑序列</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">)</span> <span class="token comment">//图中有环, 提示不能进行拓扑排序并结束</span>        <span class="token punctuation">{</span>            <span class="token class-name">MessageBox</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token string">"有向图中有环"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token keyword">break</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> visited<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>        <span class="token comment">//进入分组的结点的后继结点入度 inDegree 减 1</span>        <span class="token punctuation">{</span>            nearVertex <span class="token operator">=</span> g<span class="token punctuation">[</span>visited<span class="token punctuation">.</span><span class="token function">elementAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getNearVertex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> nearVertex<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                v <span class="token operator">=</span> <span class="token punctuation">(</span>topoVertex<span class="token punctuation">)</span> nearVertex<span class="token punctuation">.</span><span class="token function">elementAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>                v<span class="token punctuation">.</span><span class="token function">setInDegree</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">getInDegree</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java 拓扑排序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>智能优化算法</title>
       <link href="/2022/10/11/suan-fa-xue-xi/suan-fa-xue-xi/"/>
       <url>/2022/10/11/suan-fa-xue-xi/suan-fa-xue-xi/</url>
@@ -11,6 +36,12 @@
         <content type="html"><![CDATA[<h1 id="智能优化算法"><a href="#智能优化算法" class="headerlink" title="智能优化算法"></a>智能优化算法</h1><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><h3 id="人工神经元"><a href="#人工神经元" class="headerlink" title="人工神经元"></a>人工神经元</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><blockquote><p><strong>人工神经元是有大量处理单元互联组成的自适应非线性信息处理系统</strong></p></blockquote><p>人工神经元要素：</p><p>​1.具有一组突触，ωij表示神经元i j之间的连接强度，其值可正可负</p><p>​2.具有体现神经元时空整合功能的输入信号累加器</p><p>​3.通过激励函数控制神经元的实际输出</p><p><strong>数学表示</strong></p><p>​激励函数描述输入输出之间的关系，最基本的类型为阶跃函数和S型函数</p><p>​阶跃函数<br>$$<br>f(t) = \begin{cases}</p><p>1,&amp; t≥0 \</p><p>0,&amp; t&lt;0 \</p><p>\end{cases}<br>$$<br>​S型函数<br>$$<br>f(t) = \frac{1}{1+e^{-t}}<br>$$</p><h4 id="算法模型"><a href="#算法模型" class="headerlink" title="算法模型"></a>算法模型</h4>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 调度算法 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -30,6 +61,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
       
     </entry>
     
@@ -52,7 +89,7 @@
       
         <tags>
             
-            <tag> 车间调度 </tag>
+            <tag> 调度算法 </tag>
             
         </tags>
       
